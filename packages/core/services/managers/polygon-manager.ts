@@ -43,7 +43,7 @@ export class PolygonManager {
     return this._polygons.get(path).then((l: Polygon) => { l.setOptions(options); });
   }
 
-  getPathsForPolygon(polygon: AgmPolygon): Promise<Array<any>> {
+  getPathsForPolygon(polygon: AgmPolygon): Promise<any> {
     return this._polygons.get(polygon).then((polygon: any) => {
       return polygon.getPaths();
     });
